@@ -14,42 +14,14 @@ This is a personal portfolio website built using Vite+React, Tailwind CSS, and F
 - **Styling:** Tailwind CSS
 - **Animations:** Framer Motion
 
-## Installation & Setup
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/sathishk-dev/illustration-portfolio.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd illustration-portfolio
-   ```
-3. Install dependencies:
-   ```sh
-   npm install
-   ```
-4. Start the development server:
-   ```sh
-   npm run dev
-   ```
-   The app will be available at `http://localhost:3000/`.
-
-## Demo
-Check out the live demo of the portfolio website: [Live Demo](https://sk-illustration-portfolio.netlify.app/)
-
-## Deployment
-To deploy the portfolio website, you can use platforms like:
-- **Vercel**
-- **Netlify**
-- **GitHub Pages** (with additional configurations)
 
 ## How to Contribute
 If you’d like to contribute or improve this project, feel free to fork the repository and submit a pull request.
 
 ## Contact
 If you have any questions or suggestions, feel free to reach out via:
-- **Email:** sathish31102004@gmail.com
-- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/sathishk-dev)
+- **Email:** chakrabortyrajat3689@gmail.com
+- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/rajat-chakraborty-b72aa8219)
 
 ---
-Made with ❤️ by Sathish Kumar.
+Made by Rajat Chakraborty.
