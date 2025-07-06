@@ -13,16 +13,16 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    website: '',
+    phone: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  // EmailJS Configuration - Replace with your actual values
-  const EMAIL_SERVICE_ID = 'service_924wuqg';
-  const EMAIL_TEMPLATE_ID = 'template_uqyylba';
-  const EMAIL_PUBLIC_KEY = 'pGbrce4BDjJEtXQVl';
+  // EmailJS Configuration
+  const EMAIL_SERVICE_ID = 'service_v772t1i';
+  const EMAIL_TEMPLATE_ID = 'template_xpupqby';
+  const EMAIL_PUBLIC_KEY = 'qmRj_1qgVNMUEzjKa';
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -52,7 +52,7 @@ export default function Contact() {
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
-        website: formData.website || 'Not provided',
+        phone: formData.phone || 'Not provided',
         message: formData.message,
         to_email: 'chakrabortyrajat3689@gmail.com'
       };
@@ -70,7 +70,7 @@ export default function Contact() {
         setFormData({
           name: '',
           email: '',
-          website: '',
+          phone: '',
           message: ''
         });
         
@@ -135,18 +135,18 @@ export default function Contact() {
             />
             <input 
               className='border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full' 
-              type="text" 
-              name="website"
-              value={formData.website}
+              type="tel" 
+              name="phone"
+              value={formData.phone}
               onChange={handleInputChange}
-              placeholder='Your website (If exists)' 
+              placeholder='Your phone number' 
             />
             <textarea 
               className='resize-none border-2 px-5 py-3 h-32 border-black placeholder:text-[#71717A] rounded text-sm w-full' 
               name="message"
               value={formData.message}
               onChange={handleInputChange}
-              placeholder='How can I help?*'
+              placeholder='How can I help? (Write your Message)'
               required
             ></textarea>
 
