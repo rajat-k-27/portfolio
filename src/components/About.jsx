@@ -27,7 +27,13 @@ export default function About() {
 
         <p className="text-[#71717A] text-sm/6 lg:text-base mt-5 lg:mt-10">
 
-          I'm a results-driven Full Stack Developer mastering Next.js, React.js, React Native, Node.js, Express.js, MongoDB, Firebase, Socket.io, WebRTC, Tailwind CSS, NextAuth, and Expo. I craft scalable, high-performance web and mobile apps with seamless UX and robust backend systems. My solutions have boosted user retention by 20%, slashed operational time by 30%, and cut API latency by 15%. From a real-time chat app for 1,000+ users to a job platform reducing search time by 40% and a video app with 200ms latency, I deliver projects that drive impact. Ready to build your next big idea with precision and innovation lets create something extraordinary together.
+Hi, I’m Rajat Chakraborty a passionate Full-Stack Web & Mobile Developer with a love for building interactive, user-friendly, and scalable digital experiences.
+With expertise in Next.js, React.js, Django, Node.js, and Three.js, I enjoy crafting applications that are not only functional but also visually engaging.
+
+I have hands-on experience developing real-time applications, 3D web experiences, and mobile apps, and I thrive on turning ideas into well-designed, high-performing products. Beyond coding, I value clean architecture, collaborative teamwork, and continuous learning to stay ahead in tech.
+
+When I’m not coding, you’ll probably find me exploring new design trends, experimenting with emerging technologies, or enjoying a good cup of coffee.
+
         </p>
 
 
