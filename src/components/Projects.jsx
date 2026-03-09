@@ -1,5 +1,5 @@
 import React from 'react';
-import { TbExternalLink } from "react-icons/tb";
+import { TbBrandGithub, TbExternalLink } from "react-icons/tb";
 import { motion } from 'framer-motion';
 
 const projects = [
@@ -8,6 +8,7 @@ const projects = [
     title: "KeepQuiet",
     description: "KeepQuiet is a scalable real-time chat app supporting 1,000+ concurrent users with low-latency messaging. Built with React.js, Socket.io, Node.js, MongoDB, and Tailwind CSS, it delivers a sleek, responsive UI and robust performance.",
     image: "/assets/keepquiet.png",
+    github: "https://github.com/rajat-k-27/realtime-chat-application",
     link: "https://realtime-chat-application-inky.vercel.app/"
   },
   {
@@ -15,6 +16,7 @@ const projects = [
     title: "MeetUp",
     description: "MeetUp is a real-time video chat application built with Next.js, WebRTC, and Firebase. It delivers seamless communication with <200ms latency and secure authentication via NextAuth.",
     image: "/assets/meetup.png",
+    github: "https://github.com/rajat-k-27/meetup",
     link: "https://meetup-eight-opal.vercel.app/"
   },
   {
@@ -22,7 +24,16 @@ const projects = [
     title: "JobFinder",
     description: "JobFinder is a cross-platform job search app built with React Native, Expo, Node.js, and Express. It streamlines job discovery, reducing user search time by 40% through intelligent filtering and optimized APIs.",
     image: "/assets/jobfind.png",
+    github: "https://github.com/rajat-k-27/jobfinder",
     link: "https://github.com/rajat-k-27/jobfinder"
+  },
+  {
+    id: 4,
+    title: "Dishari",
+    description: "Dishari is a robust, production-ready full-stack e-commerce platform engineered to deliver a seamless and high-performance shopping experience. The application features a secure authentication system, cloud-based asset management, and a fully functional admin dashboard for efficient product and order management.",
+    image: "/assets/dishari_cover_img.jpg",
+    github: "https://github.com/rajat-k-27/dishari",
+    link: "https://dishari-rose.vercel.app/"
   }
 ];
 
@@ -51,19 +62,40 @@ export default function Projects() {
               />
             </div>
 
-            <div className="lg:w-1/2 lg:space-y-6 space-y-4">
-              <h2 className="font-extrabold text-white mt-5 lg:mt-0 text-3xl lg:text-5xl">
-                {String(project.id).padStart(2, "0")}
-              </h2>
-              <p className="font-bold text-white text-xl lg:text-3xl">{project.title}</p>
+           <div className="lg:w-1/2 lg:space-y-6 space-y-4">
+  <h2 className="font-extrabold text-white mt-5 lg:mt-0 text-3xl lg:text-5xl">
+    {String(project.id).padStart(2, "0")}
+  </h2>
 
-              <p className="font-light text-sm/6 lg:text-base text-[#71717A]">
-                {project.description}
-              </p>
-              <a href={project.link} className="text-white mt-3 block" target="_blank" rel="noopener noreferrer">
-                <TbExternalLink size={23} />
-              </a>
-            </div>
+  <p className="font-bold text-white text-xl lg:text-3xl">
+    {project.title}
+  </p>
+
+  <p className="font-light text-sm/6 lg:text-base text-[#71717A]">
+    {project.description}
+  </p>
+
+  {/* Icons */}
+  <div className="flex items-center gap-4 mt-3">
+    <a
+      href={project.link}
+      className="text-white"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <TbExternalLink size={23} />
+    </a>
+
+    <a
+      href={project.github}
+      className="text-white"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <TbBrandGithub size={23} />
+    </a>
+  </div>
+</div>
           </motion.div>
         ))}
       </div>

@@ -44,7 +44,7 @@ export default function Home() {
               />
             </motion.h2>
             <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
-              <span className="font-extrabold hover:text-gray-500">Fullstack</span>{" "}
+              <span className="font-extrabold hover:text-gray-500">Software</span>{" "}
               <span
                 className="text-white font-extrabold "
                 style={{ WebkitTextStroke: "1px black" }}

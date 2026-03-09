@@ -39,7 +39,7 @@ export default function CustomCursor() {
 
   return (
     <motion.div
-      className="fixed bg-[#acbfa4] rounded-full pointer-events-none mix-blend-difference z-50"
+      className="fixed bg-black border-2 border-white rounded-full pointer-events-none mix-blend-difference z-50"
       style={{ width: cursorSize, height: cursorSize }}
       animate={{ x: cursorPosition.x - cursorSize / 2, y: cursorPosition.y - cursorSize / 2 }}
       transition={{ type: "spring", stiffness: 200, damping: 20 }}

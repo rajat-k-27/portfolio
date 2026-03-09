@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function About() {
   return (
-    <div className="px-5 lg:px-28 flex justify-between flex-col lg:flex-row" id="about">
+    <div className="px-5 lg:px-28 flex justify-between flex-col lg:flex-row gap-8 lg:gap-12" id="about">
       <motion.div
         className="lg:w-1/2"
         initial={{ opacity: 0, x: -50 }}

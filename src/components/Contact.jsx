@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { BiLogoGmail } from 'react-icons/bi';
 import { BsGithub } from 'react-icons/bs';
@@ -9,6 +9,7 @@ import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const ref = useRef(null);
+  const formRef = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   const [formData, setFormData] = useState({
     name: '',
@@ -24,6 +25,11 @@ export default function Contact() {
   const EMAIL_TEMPLATE_ID = 'template_xpupqby';
   const EMAIL_PUBLIC_KEY = 'qmRj_1qgVNMUEzjKa';
 
+  // Initialize EmailJS once when component mounts
+  useEffect(() => {
+    emailjs.init(EMAIL_PUBLIC_KEY);
+  }, []);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -38,6 +44,7 @@ export default function Contact() {
     // Validate required fields
     if (!formData.name || !formData.email || !formData.message) {
       setSubmitStatus('error');
+      console.log('Validation failed - missing required fields');
       return;
     }
 
@@ -45,17 +52,19 @@ export default function Contact() {
     setSubmitStatus(null);
 
     try {
-      // Initialize EmailJS with your public key
-      emailjs.init(EMAIL_PUBLIC_KEY);
-
+      console.log('Attempting to send email...');
+      
       // Prepare template parameters
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
         phone: formData.phone || 'Not provided',
         message: formData.message,
-        to_email: 'chakrabortyrajat3689@gmail.com'
+        to_name: 'Rajat',
+        reply_to: formData.email
       };
+
+      console.log('Template params:', templateParams);
 
       // Send email using EmailJS
       const result = await emailjs.send(
@@ -63,6 +72,8 @@ export default function Contact() {
         EMAIL_TEMPLATE_ID,
         templateParams
       );
+
+      console.log('EmailJS Response:', result);
 
       if (result.status === 200) {
         setSubmitStatus('success');
@@ -79,10 +90,12 @@ export default function Contact() {
           setSubmitStatus(null);
         }, 5000);
       } else {
+        console.error('EmailJS returned non-200 status:', result.status);
         setSubmitStatus('error');
       }
     } catch (error) {
       console.error('Email send failed:', error);
+      console.error('Error details:', error.text || error.message);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
