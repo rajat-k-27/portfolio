@@ -63,7 +63,7 @@ export default function Navbar() {
         </ul>
 
         <motion.a
-          href="https://drive.google.com/file/d/1baaPvjaxJPAfBU4NHbZrZBFoX9ClG-DA/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1kTdnm0fnQB7ZGZp4wUHpdfyuNKykAzki/view?usp=drivesdk"
           className="hidden relative lg:inline-block px-4 py-2 font-medium group"
         >
           <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
@@ -110,7 +110,7 @@ export default function Navbar() {
                 </motion.li>
               ))}
               <motion.a
-                href="https://drive.google.com/file/d/1baaPvjaxJPAfBU4NHbZrZBFoX9ClG-DA/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1kTdnm0fnQB7ZGZp4wUHpdfyuNKykAzki/view?usp=drivesdk"
                 className="relative inline-block px-4 py-2 font-semibold group"
                 whileHover={{ scale: 1.1 }}
               >
