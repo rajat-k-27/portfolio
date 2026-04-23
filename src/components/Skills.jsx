@@ -24,7 +24,7 @@ export default function Skills() {
       id: 1,
       company: "DevOrbital",
       role: "Full Stack Developer Intern",
-      period: "Apr 2025 - Jul 2025",
+      period: "Apr 2025 - Dec 2025",
       description:
       "Architected and implemented a React Native mobile app, delivering a responsive frontend and scalable backend for a high-performance user experience. Developed secure RESTful APIs with Node.js and Express.js, enhancing data retrieval efficiency by 20%. Built a dynamic reporting dashboard for internal teams, reducing data analysis time by 40%. Worked in an Agile team, driving iterative feature development and improving code quality through rigorous testing.",
       logo: "/assets/devorbital.jpeg",
